@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --positionMoment: 50%;
+    --positionJumpFinal: 50%;
+}
+
+.gameBoard {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    border: 1px solid tomato;
+    position: relative;
+    overflow: hidden;            /*corta o conteudo que ultrapassa o tamanho da div*/
+}
+
+.pipeNormal {
+    bottom: 0;
+}
+
+.pipes > img {                  /*pega apenas os img filhos de pipes*/
+    position: absolute;         /*nao interfere no conteudo de outras imagens*/
+    height: 30%;
+    animation: animationPipes 4s infinite linear;
+}
+
+.bird {
+    position: absolute;
+    height: 7%;
+    bottom: 50%;
+    /* animation: animationJumpBird 1s infinite ease-out; */
+    animation: animationFallBird 1.2s linear;
+}
+
+.jumpBird {
+    animation: animationJumpBird 1s infinite ease-out;
+}
+
+
