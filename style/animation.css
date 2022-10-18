@@ -9,18 +9,18 @@
 }
 
 @keyframes animationJumpBird {
-    0% {
+    from {
         bottom: var(--positionMoment);
     }
 
-    100% {
+    to {
         bottom: var(--positionJumpFinal);
     }
 }
 
 @keyframes animationFallBird {
     from {
-        bottom: 50%;
+        bottom: var(--positionJumpFinal);
     }
 
     to {

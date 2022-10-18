@@ -31,13 +31,16 @@
 .bird {
     position: absolute;
     height: 7%;
-    bottom: 50%;
-    /* animation: animationJumpBird 1s infinite ease-out; */
-    animation: animationFallBird 1.2s linear;
+    bottom: var(--positionMoment);
+    right: 85%;
 }
 
 .jumpBird {
-    animation: animationJumpBird 1s infinite ease-out;
+    animation: animationJumpBird 500ms ease-out;
+}
+
+.fallBird {
+    animation: animationFallBird 1.2s ease-in;
 }
 
 
