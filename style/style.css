@@ -16,6 +16,14 @@
     border: 1px solid tomato;
     position: relative;
     overflow: hidden;            /*corta o conteudo que ultrapassa o tamanho da div*/
+    background-color: #81cfe0;
+}
+
+.cloud {
+    position: absolute;
+    bottom: 55%;
+    width: 70%;
+    animation: animationCloud 15s infinite linear;
 }
 
 .pipeNormal {
@@ -41,6 +49,13 @@
 
 .fallBird {
     animation: animationFallBird 1.2s ease-in;
+}
+
+.floor {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    bottom: 0;
 }
 
 
