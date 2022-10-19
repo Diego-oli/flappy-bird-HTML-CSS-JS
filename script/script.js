@@ -8,29 +8,25 @@ let valuePositionJumpFinal = getComputedStyle(varCSS).getPropertyValue('--positi
 
 const jump = () => {
 
-    if (flagClick === true) {
-        updateValue();
-        varCSS.style.setProperty('--positionMoment', parseInt(valueBottom) + 'px');
-        varCSS.style.setProperty('--positionJumpFinal', parseInt(valueBottom) + 100 + 'px');
-        bird.classList.add('jumpBird');
-        bird.classList.remove('fallBird');
-        flagClick = false;
-    }
+    updateValue();
+    varCSS.style.setProperty('--positionMoment', parseInt(valueBottom) + 'px');
+    varCSS.style.setProperty('--positionJumpFinal', parseInt(valueBottom) + 100 + 'px');
+    bird.classList.add('jumpBird');
+    bird.classList.remove('fallBird');
     
     setTimeout(() => {
         updateValue();
         bird.classList.remove('jumpBird');
         bird.classList.add('fallBird');
-        flagClick = true;
     }, 500);
+    
 
 
     // console.log(valueBottom);
     // console.log(valuePositionMoment);
     // console.log(valuePositionJumpFinal);
 }
-
-document.addEventListener('click', jump);
+    document.addEventListener('click', jump);
 
 function updateValue() {
     valueBottom = getComputedStyle(bird).getPropertyValue('bottom');    //pega valor atual de bottom do bird

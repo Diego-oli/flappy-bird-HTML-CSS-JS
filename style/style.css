@@ -32,7 +32,7 @@
 
 .pipes > img {                  /*pega apenas os img filhos de pipes*/
     position: absolute;         /*nao interfere no conteudo de outras imagens*/
-    height: 30%;
+    height: 35%;
     animation: animationPipes 4s infinite linear;
 }
 
@@ -41,6 +41,7 @@
     height: 7%;
     bottom: var(--positionMoment);
     right: 85%;
+    
 }
 
 .jumpBird {

@@ -1,6 +1,6 @@
 @keyframes animationPipes{
     from {
-        right: -75px;
+        right: -105px;
     }
 
     to {
@@ -20,20 +20,24 @@
 
 @keyframes animationJumpBird {
     from {
+        transform: rotate(-15deg);
         bottom: var(--positionMoment);
     }
 
     to {
+        transform: rotate(3deg);
         bottom: var(--positionJumpFinal);
     }
 }
 
 @keyframes animationFallBird {
     from {
+        transform: rotate(4deg);
         bottom: var(--positionJumpFinal);
     }
 
     to {
+        transform: rotate(45deg);
         bottom: 0;
     }
 }
