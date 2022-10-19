@@ -1,7 +1,7 @@
 const bird = document.querySelector('.bird');
 const varCSS = document.documentElement;    // acessa campo de var do style.css
-const pipes = document.querySelector('.pipes > img');
 const pipeNormal = document.querySelector('.pipeNormal');
+const pipeInvert = document.querySelector('.pipeInvert');
 const cloud = document.querySelector('.cloud');
 let flagClick = true;
 
@@ -22,8 +22,6 @@ const jump = () => {
         bird.classList.remove('jumpBird');
         bird.classList.add('fallBird');
     }, 500);
-    
-    
 
     // console.log(valueBottom);
     // console.log(valuePositionMoment);
@@ -33,19 +31,22 @@ const jump = () => {
 
 const checkCrash = setInterval(() => { 
 
-    const pipesPosition = parseInt(pipes.offsetLeft);
+    const pipesPosition = parseInt(pipeNormal.offsetLeft);
     const birdPosition = parseInt(window.getComputedStyle(bird).bottom);
     const cloudPosition = parseInt(cloud.offsetLeft);
 
-    console.log(birdPosition);
-
     if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition === 190)) || birdPosition <= 97) {
-        pipes.style.animation = 'none';
         pipeNormal.style.animation = 'none';
+        pipeInvert.style.animation = 'none';
+        pipeNormal.style.left = pipesPosition + 'px';
+        pipeInvert.style.left = pipesPosition + 'px';
+
         cloud.style.animation = 'none';
         cloud.style.left = cloudPosition + 'px';
+
         bird.classList.remove('fallBird');
-        console.log('bateu');
+        bird.style.bottom = birdPosition + 'px';
+        bird.style.animation = 'none';
     }
 
 }, 10);
