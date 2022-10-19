@@ -3,7 +3,10 @@ const varCSS = document.documentElement;    // acessa campo de var do style.css
 const pipeNormal = document.querySelector('.pipeNormal');
 const pipeInvert = document.querySelector('.pipeInvert');
 const cloud = document.querySelector('.cloud');
-let flagClick = true;
+const score = document.querySelector('.points');
+
+let points = 0;
+flagPoints = true;
 
 let valueBottom = getComputedStyle(bird).getPropertyValue('bottom');    //pega valor atual de bottom do bird
 let valuePositionMoment = getComputedStyle(varCSS).getPropertyValue('--positionMoment');
@@ -22,6 +25,8 @@ const jump = () => {
         bird.classList.remove('jumpBird');
         bird.classList.add('fallBird');
     }, 500);
+
+    point.textContent = '500'
 
     // console.log(valueBottom);
     // console.log(valuePositionMoment);
@@ -49,6 +54,16 @@ const checkCrash = setInterval(() => {
         bird.style.animation = 'none';
     }
 
+    if (pipesPosition <= 135 && flagPoints === true) {
+        points++;
+        score.textContent = points + '';
+        flagPoints = false;
+
+        // permite o aumento do score apenas em um intervalo de 1seg
+        setTimeout(() => {
+            flagPoints = true;
+        }, 1000);
+    }
 }, 10);
 
 function updateValue() {
