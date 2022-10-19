@@ -35,7 +35,7 @@ const checkCrash = setInterval(() => {
     const birdPosition = parseInt(window.getComputedStyle(bird).bottom);
     const cloudPosition = parseInt(cloud.offsetLeft);
 
-    if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition === 190)) || birdPosition <= 97) {
+    if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition <= 190 && pipesPosition >= 70)) || birdPosition <= 97) {
         pipeNormal.style.animation = 'none';
         pipeInvert.style.animation = 'none';
         pipeNormal.style.left = pipesPosition + 'px';
