@@ -1,17 +1,3 @@
-const bird = document.querySelector('.bird');
-const varCSS = document.documentElement;    // acessa campo de var do style.css
-const pipeNormal = document.querySelector('.pipeNormal');
-const pipeInvert = document.querySelector('.pipeInvert');
-const cloud = document.querySelector('.cloud');
-const score = document.querySelector('.points');
-
-let points = 0;
-flagPoints = true;
-
-let valueBottom = getComputedStyle(bird).getPropertyValue('bottom');    //pega valor atual de bottom do bird
-let valuePositionMoment = getComputedStyle(varCSS).getPropertyValue('--positionMoment');
-let valuePositionJumpFinal = getComputedStyle(varCSS).getPropertyValue('--positionJumpFinal');
-
 const jump = () => {
 
     updateValue();
@@ -38,7 +24,7 @@ const checkCrash = setInterval(() => {
 
     const pipesPosition = parseInt(pipeNormal.offsetLeft);
     const birdPosition = parseInt(window.getComputedStyle(bird).bottom);
-    const cloudPosition = parseInt(cloud.offsetLeft);
+    // const cloudPosition = parseInt(cloud.offsetLeft);
 
     if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition <= 190 && pipesPosition >= 70)) || birdPosition <= 97) {
         pipeNormal.style.animation = 'none';
@@ -46,8 +32,6 @@ const checkCrash = setInterval(() => {
         pipeNormal.style.left = pipesPosition + 'px';
         pipeInvert.style.left = pipesPosition + 'px';
 
-        cloud.style.animation = 'none';
-        cloud.style.left = cloudPosition + 'px';
 
         bird.classList.remove('fallBird');
         bird.style.bottom = birdPosition + 'px';

@@ -16,6 +16,7 @@ p {
     color: white;
     font-size: 13vh;
     text-align: center;
+    z-index: 1;
 }
 
 .gameBoard {
@@ -28,11 +29,11 @@ p {
     background-color: #81cfe0;
 }
 
-.cloud {
-    position: absolute;
-    bottom: 55%;
-    width: 70%;
-    animation: animationCloud 15s infinite linear;
+.background {
+    position: fixed;
+    width: 100%;
+    bottom: 10%;
+    filter: blur(1px) saturate(80%);
 }
 
 .pipeNormal {
@@ -66,5 +67,3 @@ p {
     height: 75%;
     bottom: 0;
 }
-
-
