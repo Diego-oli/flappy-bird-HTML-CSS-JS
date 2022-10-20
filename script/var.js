@@ -5,7 +5,10 @@ const pipeInvert = document.querySelector('.pipeInvert');
 const score = document.querySelector('.points');
 
 let points = 0;
-flagPoints = true;
+var flagPoints = true;
+
+var flagJump = true;
+var flagFall = true;
 
 let valueBottom = getComputedStyle(bird).getPropertyValue('bottom');    //pega valor atual de bottom do bird
 let valuePositionMoment = getComputedStyle(varCSS).getPropertyValue('--positionMoment');
