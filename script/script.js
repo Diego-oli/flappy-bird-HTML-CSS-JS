@@ -1,10 +1,5 @@
 document.addEventListener('keydown', () => {
-    // pipeNormal.classList.remove('left');
-    // pipeInvert.classList.remove('left');
-
-    
-
-    // console.log('teste');
+    // debugging
 });
 
 document.addEventListener('click', (event) => {
