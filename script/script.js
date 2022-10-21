@@ -19,6 +19,12 @@ document.addEventListener('click', (event) => {
         score.textContent = points + '';
         flagMenu = true;
     } else if (flagMenu === true) {
+        // impede de contar os pontos antes da hora certa
+        if (points === 0) {
+            setTimeout(() => {
+                flagPoints = true;
+            }, 500)
+        }
         jump();
     }
 });
@@ -71,7 +77,7 @@ const checkCrash = setInterval(() => {
         flagPoints = false;
     }
 
-    if (pipesPosition <= 135 && flagPoints === true) {
+    if (pipesPosition <= 135 && pipesPosition >= 0 && flagPoints === true) {
         points++;
         score.textContent = points + '';
         flagPoints = false;
