@@ -1,3 +1,28 @@
+document.addEventListener('keydown', () => {
+    // pipeNormal.classList.remove('left');
+    // pipeInvert.classList.remove('left');
+
+    
+
+    // console.log('teste');
+});
+
+document.addEventListener('click', (event) => {
+    if (flagMenu === false && event.target.classList.value === 'iconPlay') {
+        menu.style.display = 'none';
+        score.style.display = 'block';
+        gameBoard.classList.remove('gameLowBrightness');
+        bird.style.bottom = 50 + '%';
+        pipeNormal.removeAttribute("style");
+        pipeInvert.removeAttribute("style");
+        points = 0;
+        score.textContent = points + '';
+        flagMenu = true;
+    } else if (flagMenu === true) {
+        jump();
+    }
+});
+
 const jump = () => {
     updateValue();
     if (flagJump === true) {
@@ -18,26 +43,31 @@ const jump = () => {
                 flagFall = true;
             }, 500);
     }
-}
-
-    document.addEventListener('click', jump); 
+} 
 
 const checkCrash = setInterval(() => { 
 
     const pipesPosition = parseInt(pipeNormal.offsetLeft);
     const birdPosition = parseInt(window.getComputedStyle(bird).bottom);
 
-    if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition <= 190 && pipesPosition >= 70)) || birdPosition <= 97) {
-        pipeNormal.style.animation = 'none';
-        pipeInvert.style.animation = 'none';
+    if (((birdPosition <= 225 || birdPosition >= 385) && (pipesPosition <= 190 && pipesPosition >= 70)) || birdPosition <= 97 && flagMenu === true) {
         pipeNormal.style.left = pipesPosition + 'px';
         pipeInvert.style.left = pipesPosition + 'px';
 
 
         bird.classList.remove('fallBird');
         bird.style.bottom = birdPosition + 'px';
-        bird.style.animation = 'none';
 
+        menu.style.display = 'flex';
+        gameBoard.classList.add('gameLowBrightness');
+
+        if (points > highScore) {
+            highScore = points;
+            scoreMenu.textContent = highScore + '';
+            console.log('teste');
+        }
+
+        flagMenu = false;
         flagPoints = false;
     }
 
@@ -58,3 +88,4 @@ function updateValue() {
     valuePositionMoment = getComputedStyle(varCSS).getPropertyValue('--positionMoment');
     valuePositionJumpFinal = getComputedStyle(varCSS).getPropertyValue('--positionJumpFinal');
 }
+

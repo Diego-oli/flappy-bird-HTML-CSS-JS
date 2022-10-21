@@ -12,17 +12,22 @@
     <title>Flappy Bird</title>
 </head>
 <body>
-    <section class="gameBoard">
+    <nav class="menu">
+        <p class="nameGame">Flappy Bird</p>
+        <p class="pointsMenu">0</p>
+        <img src="images/button_play_normal.png" class="iconPlay">
+    </nav>
+    <section class="gameBoard gameLowBrightness">
         <p class="points">0</p>
         <img src="images/background.png" class="background">
         <div class="pipes">
-            <img src="images/pipe.png" class="pipeNormal">
-            <img src="images/pipe-invert.png" class="pipeInvert">
+            <img src="images/pipe.png" class="pipeNormal pipeAnimation">
+            <img src="images/pipe-invert.png" class="pipeInvert pipeAnimation">
         </div>
-        <img src="images/bird.png" class="bird fallBird">
+        <img src="images/bird.png" class="bird">
         <img src="images/floor.png" class = "floor">
     </section>
 </body>
-    <script src="script/script.js"></script>
     <script src="script/var.js"></script>
+    <script src="script/script.js"></script>
 </html>

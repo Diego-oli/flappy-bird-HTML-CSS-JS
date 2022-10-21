@@ -9,23 +9,71 @@
     --positionJumpFinal: 50%;
 }
 
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
 .gameBoard {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;            /*corta o conteudo que ultrapassa o tamanho da div*/
-    background-color: #81cfe0;
+    overflow: hidden;            /*corta o conteudo que ultrapassa o tamanho da div*/  
 }
 
-p {
+.gameLowBrightness {
+    filter: brightness(70%);
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 40vh;
+    width: 40vw;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: tomato; */
+    bottom: 30%;
+}
+
+.nameGame {
+    font-family: 'Silkscreen', cursive;
+    color: orange;
+    font-size: 12vh;
+    letter-spacing: -7px;
+    line-height: 0.5;
+    text-shadow: black 3px 3px;
+}
+
+.pointsMenu {
+    font-family: 'Silkscreen', cursive;
+    color: white;
+    font-size: 13vh;
+    letter-spacing: -7px;
+    text-shadow: black 3px 3px;
+}
+
+.iconPlay {
+    width: 18vh;
+    margin-left: 12px;
+}
+
+.points {
     width: 100%;
     position: absolute;
     font-family: 'Silkscreen', cursive;
     color: white;
     font-size: 13vh;
+    letter-spacing: -7px;
     text-align: center;
     z-index: 1;
+    text-shadow: black 3px 3px;
+    display: none;
 }
 
 .background {
@@ -42,6 +90,9 @@ p {
 .pipes > img {                  /*pega apenas os img filhos de pipes*/
     position: absolute;         /*nao interfere no conteudo de outras imagens*/
     height: 35%;
+}
+
+.pipeAnimation {
     animation: animationPipes 4s infinite linear;
 }
 
