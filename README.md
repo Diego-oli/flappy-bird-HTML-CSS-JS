@@ -11,6 +11,12 @@ Abaixo está representado visualmente um vídeo de demonstração do jogo (lembr
 
 ![flappy bird](https://user-images.githubusercontent.com/102616676/197397641-f0c93deb-eef0-4cf2-9686-bfcd8e0cae3e.gif)
 
+# 🧬 Tecnologias utilizadas 🧬
+
+- HTML5
+- CSS3
+- JavaScript
+
 # ⏯ Como executar o projeto ⏯
 ```bash
 # clonar repositório
