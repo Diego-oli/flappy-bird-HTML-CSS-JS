@@ -1,1 +1,1 @@
-desemvolvido para apresentação para calouros do curso tecnico de desenvolvimento de sistemas 
+desenvolvido para apresentação para calouros do curso tecnico de desenvolvimento de sistemas 
