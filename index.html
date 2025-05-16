@@ -1,33 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/animation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-    <title>Flappy Bird</title>
-</head>
+	<title>trabalho</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<!-- Made with Construct, the game and app creator :: https://www.construct.net -->
+	<meta name="generator" content="Scirra Construct">
+
+
+
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+	<link rel="icon" type="image/png" href="icons/icon-512.png">
+
+	<link rel="stylesheet" href="style.css">
+
+
+
+</head> 
+ 
 <body>
-    <nav class="menu">
-        <p class="nameGame">Flappy Bird</p>
-        <p class="pointsMenu">0</p>
-        <img src="images/button_play_normal.png" class="iconPlay">
-    </nav>
-    <section class="gameBoard gameLowBrightness">
-        <p class="points">0</p>
-        <img src="images/background.png" class="background">
-        <div class="pipes">
-            <img src="images/pipe.png" class="pipeNormal pipeAnimation">
-            <img src="images/pipe-invert.png" class="pipeInvert pipeAnimation">
-        </div>
-        <img src="images/bird.png" class="bird">
-        <img src="images/floor.png" class = "floor">
-    </section>
-</body>
-    <script src="script/var.js"></script>
-    <script src="script/script.js"></script>
+
+	
+
+<script>
+if (location.protocol.substr(0, 4) === "file")
+{
+	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+}
+</script>
+	
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/modernjscheck.js"></script>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
+
+</body> 
 </html>
